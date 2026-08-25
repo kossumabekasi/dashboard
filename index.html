@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#6d4c9c">
+
+  <title>Portal Kossuma Bekasi</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #f3f0f8;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      border: none;
+      background: #f3f0f8;
+    }
+  </style>
+</head>
+
+<body>
+  <iframe
+    src="https://kossuma.s.gy/bekasi"
+    title="Portal Kossuma Bekasi"
+    allow="clipboard-write"
+  ></iframe>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./service-worker.js");
+      });
+    }
+  </script>
+</body>
+</html>
